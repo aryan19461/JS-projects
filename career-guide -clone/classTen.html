@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Class 10</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styleTEN.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    </head>
+    <body>
+            <form  class="fillup">
+                <div class="title">
+                    <i  id="pencil" class="fas fa-pencil-alt"></i> 
+                    <h2>Register here</h2>
+                  </div>
+                  <div class="info">
+                    <input  type="text" id="name" name="name" placeholder="Full name">
+                    <input type="text" id="email" name="name" placeholder="Email">
+                    <input type="text" id="phone" name="name" placeholder="Phone number">
+                    <input type="password" id="password" name="name" placeholder="Password">
+                    <select id="course-type">
+                      <option value="course-type" selected>Course type*</option>
+                      <option value="short-courses">Short courses</option>
+                      <option value="featured-courses">Featured courses</option>
+                      <option value="undergraduate">Undergraduate</option>
+                      <option value="diploma">Diploma</option>
+                      <option value="certificate">Certificate</option>
+                      <option value="masters-degree">Masters degree</option>
+                      <option value="postgraduate">Postgraduate</option>
+                    </select>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span>I agree to the mentioned conditions</span>
+                  </div>
+                  <button class="btnSubmit" id="sub" type="submit" href="/">Submit</button>
+            </form>
+            
+            
+            <div id="result" class="showR"> </div>
+    </body>
+    
+    <script>
+        const form = document.querySelector('.fillup');
+        const submitButton = document.getElementById('sub');
+        const resultContainer = document.getElementById('result');
+
+        submitButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const phone = document.getElementById('phone').value;
+          const password = document.getElementById('password').value;
+          const courseType = document.getElementById('course-type').value;
+      
+          const result = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPassword: ${password}\nCourse type: ${courseType}`;
+          
+          //alert(result);
+          console.log(result);
+          resultContainer.innerHTML = result;
+        });
+        
+    </script>
+
+</html>
