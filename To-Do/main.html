@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TODO-LIST</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+              
+        <div class="header">
+            <h1>TODO-LIST</h1>
+            <h4>Enter the daliy work list</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <input id="inputUser" type="text" placeholder="Enter the work details" maxlength="27">
+                <button  id="enter" onclick="addTodo()" >Enter</button>
+            </div>
+        </div>
+        <div class="listcontainer">
+            <ul id="list">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!---Empty list 
+        <div class="row2">
+			<div class="listItems col-12">
+				<ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+				</ul>
+			</div>
+		</div>
+        -->
+    </body>
+    <script src="/logic3.js"></script>
+</html>

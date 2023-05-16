@@ -1,0 +1,47 @@
+.header {
+    background-color: #deadad;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    color: #fefefe;
+    font-size: 45px;
+    margin: 25px;
+}
+h4
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #da0568;
+    font-size: 20px;
+    offset: 1;
+}
+input{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #da0568;
+    font-size: 20px;
+    width: 550px;
+    padding: 12px 20px;
+    margin: 18px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+ul{
+    background-color: #c385a2;
+    color: #fefefe;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 25px;
+    padding: 10px;
+}
+body{
+    background-color: antiquewhite;
+}
+li{
+    width: fit-content;
+    font-size: 20px;
+    font-family: fantasy;
+    text-decoration: none;
+    ;
+}
