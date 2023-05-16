@@ -1,0 +1,50 @@
+body{
+    background-color: #e6aaaa;
+}
+h1{
+    text-align: center;
+    color: #000000;
+    font-size: 150px;
+    font-family: monospace;
+    text-shadow: 92px 52px 6px #298bda;
+    text-decoration: none;
+    border: 12px dashed #418784;
+
+}
+button{
+    width: 168px;
+    height: 78px;
+    font-size: larger;
+    font-size: 65px;
+    background-color: #b0e4e2;
+    color: #298bda;
+    margin-top: 50px;
+    padding: 5px;
+    margin-left: 25px;
+    border-radius: 680px 680px 8px 2px ;
+
+}
+button:hover{
+    transition: ease-in-out 0.1s;
+    background-color: #298bda;
+    color: #b0e4e2;
+}
+button:active{
+    transform: scale(1.95);
+    transition: ease-in-out 0.1s;
+    background-color: #298bda;
+    color: #b0e4
+
+
+}
+.clockcss{
+    font-size: 25px;
+    border: 2px dashed moccasin;
+    height: fit-content;
+    width: fit-content;
+    margin: 50px;
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 50%;
+}

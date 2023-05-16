@@ -20,13 +20,22 @@
             border-radius: 100%;
             display: flex;
         }
+        #draggable {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(140, 140, 214);
+            cursor: pointer;
+          }
         </style>
     <body>
-        <div id="follower">
-
-        </div>
+        <div id="follower"><div>
+        <div  id="draggable" class="drag"></div>
     </body>
     <script>
+        /*
         var follower = document.querySelector('#follower');
 
         //to show mouse movement
@@ -38,6 +47,47 @@
             follower.style.top = e.clientY + 'px';
             follower.style.left = e.clientX + 'px';
         });
-        
+       */
+       
+var draggable = document.querySelector('#draggable');
+var isDragging = false;
+var currentX;
+var currentY;
+var initialX;
+var initialY;
+var xOffset = 0;
+var yOffset = 0;
+
+//to show mouse movement
+document.addEventListener('mousemove', function (e) {
+  if (isDragging) {
+    // calculate the new cursor position
+    xOffset = e.clientX - initialX;
+    yOffset = e.clientY - initialY;
+    currentX = e.clientX - xOffset;
+    currentY = e.clientY - yOffset;
+
+    // set the element's new position
+    draggable.style.left = currentX + 'px';
+    draggable.style.top = currentY + 'px';
+  }
+});
+
+//when mouse is clicked down
+draggable.addEventListener('mousedown', function (e) {
+  // get the initial cursor position
+  initialX = e.clientX - xOffset;
+  initialY = e.clientY - yOffset;
+
+  // set dragging to true
+  isDragging = true;
+});
+
+//when mouse is released
+draggable.addEventListener('mouseup', function (e) {
+  // set dragging to false
+  isDragging = false;
+});
+
     </script>
 </html>
